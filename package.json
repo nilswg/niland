@@ -1,13 +1,24 @@
 {
-  "name": "niland-cli",
-  "version": "1.0.0",
+  "name": "@nilswg/niland",
+  "description": "niland cli",
+  "version": "0.1.0",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "niland": "./index.js"
+    "niland": "index.js"
   },
   "dependencies": {
     "figlet": "^1.6.0",
     "inquirer": "^9.2.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nilswg/niland"
+  },
+  "license": "MIT",
+  "author": "nilswg",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
   }
 }

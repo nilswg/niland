@@ -46,7 +46,6 @@ function askQuestions() {
   inquirer.prompt(questions).then((answers) => {
     console.log('\nOK, you choose :');
     console.log(JSON.stringify(answers, null, '  '));
-
     gitCloneTemplate(answers.target, answers.project_name);
   });
 }
@@ -64,5 +63,4 @@ function gitCloneTemplate(target, project_name) {
   execSync(`git clone ${repoUrl} -b ${target} ${project_name}`, {
     stdio: 'inherit',
   });
-
 }
