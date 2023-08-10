@@ -4,7 +4,7 @@ import inquirer from 'inquirer';
 import { execSync } from 'child_process';
 import { existsSync, fstatSync } from 'fs';
 
-figlet('niland', function (err, data) {
+figlet('Nilget', function (err, data) {
   if (err) {
     console.log('Something went wrong...');
     console.dir(err);
@@ -19,8 +19,8 @@ function askQuestions() {
     {
       type: 'list',
       name: 'target',
-      message: 'What do you want from niland?',
-      choices: ['ts-example', 'ts-example', 'ts-example'],
+      message: 'What do you want, and I will get for you ?',
+      choices: ['ts-example'],
       filter(val) {
         return val.toLowerCase();
       },
@@ -28,7 +28,7 @@ function askQuestions() {
     {
       type: 'input',
       name: 'project_name',
-      message: 'Any comments on your purchase experience?',
+      message: 'This is your project name ?',
       default(answer) {
         return answer.target;
       },
@@ -36,7 +36,7 @@ function askQuestions() {
         // 檢查當前檔案是否已經存在
         const exist = existsSync(val);
         if (exist) {
-          return 'Project name already exists. Please enter a new name.';
+          return `Project ${val} already exists. Please enter a new name.`;
         }
         return true;
       },
@@ -53,7 +53,7 @@ function askQuestions() {
 function gitCloneTemplate(target, project_name) {
   console.log('git clone template...');
 
-  const repoUrl = 'https://github.com/nilswg/niland.git';
+  const repoUrl = 'https://github.com/nilswg/nilget.git';
 
   if (!target || !project_name) {
     console.error('Something went wrong...');
