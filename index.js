@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // @ts-check
 import figlet from 'figlet';
 import inquirer from 'inquirer';
