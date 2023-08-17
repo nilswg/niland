@@ -1,26 +1,21 @@
 {
-  "name": "nilget",
-  "description": "CLI for nilget",
-  "version": "0.1.1",
-  "main": "index.js",
-  "type": "module",
-  "bin": {
-    "nilget": "index.js"
-  },
+  "main": "./index.ts",
+  "type": "commonjs",
   "dependencies": {
     "figlet": "1.6.0",
-    "inquirer": "9.2.10"
+    "inquirer": "8.*"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nilswg/nilget"
+  "scripts": {
+    "dev": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./index.ts",
+    "build": "rm -rf dist && tsc && tsc-alias && cp publish.json dist/package.json && cp README.md dist",
+    "publish": "cd dist && npm publish"
   },
-  "license": "MIT",
-  "author": "nilswg",
-  "engines": {
-    "node": ">=16"
-  },
-  "publishConfig": {
-    "access": "public"
+  "devDependencies": {
+    "@types/node": "20.4.9",
+    "nodemon": "3.0.1",
+    "ts-node": "10.9.1",
+    "tsc-alias": "1.8.7",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.1.6"
   }
 }

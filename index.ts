@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-// @ts-check
 import figlet from 'figlet';
 import inquirer from 'inquirer';
 import { execSync } from 'child_process';
-import { existsSync, fstatSync } from 'fs';
+import { existsSync } from 'fs';
+import { getItemsList, Items } from './items';
 
 figlet('Nilget', function (err, data) {
   if (err) {
@@ -22,7 +22,7 @@ function askQuestions() {
       type: 'list',
       name: 'target',
       message: 'What do you want, and I will get for you ?',
-      choices: ['ts-example'],
+      choices: getItemsList(),
       filter(val) {
         return val.toLowerCase();
       },
@@ -55,14 +55,11 @@ function askQuestions() {
 function gitCloneTemplate(target, project_name) {
   console.log('git clone template...');
 
-  const repoUrl = 'https://github.com/nilswg/nilget.git';
-
   if (!target || !project_name) {
     console.error('Something went wrong...');
     process.exit(1);
   }
 
-  execSync(`git clone ${repoUrl} -b ${target} ${project_name}`, {
-    stdio: 'inherit',
-  });
+  const cmd = Items[target](project_name);
+  execSync(cmd, { stdio: 'inherit' });
 }

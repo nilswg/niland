@@ -1,0 +1,26 @@
+{
+  "name": "nilget",
+  "description": "CLI for nilget",
+  "version": "0.1.2",
+  "main": "index.js",
+  "type": "commonjs",
+  "bin": {
+    "nilget": "index.js"
+  },
+  "dependencies": {
+    "figlet": "1.6.0",
+    "inquirer": "8.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nilswg/nilget"
+  },
+  "license": "MIT",
+  "author": "nilswg",
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
