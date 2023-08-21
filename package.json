@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./index.ts",
     "build": "rm -rf dist && tsc && tsc-alias && cp publish.json dist/package.json && cp README.md dist",
+    "start": "node dist/index.js",
     "publish": "cd dist && npm publish"
   },
   "devDependencies": {

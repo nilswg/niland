@@ -6,6 +6,10 @@ export const Items = {
   // @see https://github.com/nilswg/pnpm-workspace
   'pnpm-workspace': (project_name) =>
     `git clone https://github.com/nilswg/pnpm-workspace.git -b main ${project_name}`,
+
+  // @see https://github.com/nilswg/tailwind-example
+  'tailwind-example': (project_name) =>
+    `git clone https://github.com/nilswg/tailwind-example.git -b main ${project_name}`,
 } as const;
 
 export type ItemsProps = typeof Items;
