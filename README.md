@@ -1,4 +1,4 @@
-# ts-example
+# tsup-example
 
 ## dev
 ```bash
