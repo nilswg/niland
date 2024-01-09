@@ -9,7 +9,7 @@ export default defineConfig({
   entry: [
     "./src/index.tsx",
   ],
-  format: ["cjs"], // 
+  format: ["cjs", "esm"], //
   outDir: "dist",
   dts: true,
 });

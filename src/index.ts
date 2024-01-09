@@ -1,12 +1,8 @@
 import { $args } from '@/args'
 
-class Hello {
+export class Hello {
   sayHello() {
-    return "Hello World";
+    console.log("Hello World");
+    console.log($args());
   }
 }
-
-let s = new Hello().sayHello();
-console.log(s);
-
-console.log($args());

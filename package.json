@@ -1,23 +1,29 @@
 {
-  "name": "tsup-example",
+  "name": "tsup-jest",
   "type": "commonjs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "version": "0.0.1",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
+      ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js",
+          "import": "./dist/index.mjs",
+          "require": "./dist/index.js"
+      }
   },
   "scripts": {
-    "dev": "tsup src/index.ts --watch --onSuccess \"node dist/index.js -e development\"",
-    "start": "node dist/index.js -e production",
-    "build": "tsup ./src/index.ts"
+      "dev": "tsup src/index.ts --watch --onSuccess \"node dist/index.js -e development\"",
+      "start": "node dist/index.js -e production",
+      "build": "tsup ./src/index.ts",
+      "test": "jest"
   },
   "devDependencies": {
-    "@types/node": "^20.10.6",
-    "tsup": "^8.0.1",
-    "typescript": "5.3.3"
+      "@types/node": "^20.10.6",
+      "@types/jest": "^29.0.0",
+      "jest": "^27",
+      "ts-jest": "^27",
+      "tsup": "^8.0.1",
+      "typescript": "5.3.3"
   }
 }

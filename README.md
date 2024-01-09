@@ -1,11 +1,16 @@
-# tsup-example
+# tsup-jest
 
 ## dev
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ## build
 ```bash
-npm run build
+pnpm run build
+```
+
+## test
+```bash
+pnpm run test
 ```
