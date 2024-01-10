@@ -1,11 +1,9 @@
-# ts-example
+# xqsite-astro
 
-## dev
-```bash
-npm run dev
+## Astro Starter Kit: Basics
+
+
+# install
 ```
-
-## build
-```bash
-npm run build
+pnpm install
 ```

@@ -1,0 +1,28 @@
+{
+    "plugins": ["prettier-plugin-astro", "@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+    "pluginSearchDirs": false,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "printWidth": 144,
+    "semi": true,
+    "tailwindFunctions": ["cva", "cn", "createVariants"],
+    "importOrder": [
+        "<BUILT_IN_MODULES>",
+        "^(react/(.*)$)|^(react$)",
+        "^(next/(.*)$)|^(next$)",
+        "^(astro/(.*)$)|^(astro:$)",
+        "<THIRD_PARTY_MODULES>",
+        "^types$",
+        "^@/types/(.*)$",
+        "^@/config/(.*)$",
+        "^@lib/(.*)$",
+        "^@/hooks/(.*)$",
+        "^@/components/ui/(.*)$",
+        "^@/components/(.*)$",
+        "^(?!.*[.]css$)[./].*$",
+        ".css$"
+    ]
+}

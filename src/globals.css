@@ -1,0 +1,161 @@
+/* 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+}
+
+@layer base {
+    /* 高度 */
+    :root {
+        --navbar-height: 5rem;
+        --footer-height: 20rem;
+    }
+
+    :root {
+        --color-primary: 10 150 200;
+        --color-from-script: 10 150 200;
+        --color-base: 255 255 255;
+        --color-invert: 0 0 0;
+        --background: white;
+        --foreground: black;
+
+        /* @@start::light-xq-colors */
+        /* xq-blue */
+        --color-xq-blue-1: #ddeeff;
+        --color-xq-blue-2: #bbddff;
+        --color-xq-blue-3: #55bbff;
+        --color-xq-blue-4: #4488ff;
+        --color-xq-blue-5: #2266ff;
+        --color-xq-blue-6: #1144dd;
+        --color-xq-blue-7: #0033cc;
+
+        /* xq-yellow */
+        --color-xq-yellow-1: #fff7dd;
+        --color-xq-yellow-2: #ffeeaa;
+        --color-xq-yellow-3: #ffdd77;
+        --color-xq-yellow-4: #ffcc33;
+        --color-xq-yellow-5: #ffbb00;
+        --color-xq-yellow-6: #ff8822;
+        --color-xq-yellow-7: #ff6622;
+
+        /* xq-red */
+        --color-xq-red-1: #fcebeb;
+        --color-xq-red-2: #dd6666;
+        --color-xq-red-3: #dd4422;
+        --color-xq-red-4: #cc3300;
+        --color-xq-red-5: #aa3300;
+
+        /* xq-green */
+        --color-xq-green-1: #ddeecc;
+        --color-xq-green-2: #66cc66;
+        --color-xq-green-3: #009900;
+        --color-xq-green-4: #007700;
+        --color-xq-green-5: #005500;
+
+        /* xq-gray */
+        --color-xq-gray-1: #ffffff;
+        --color-xq-gray-2: #fafafa;
+        --color-xq-gray-3: #f0f0f0;
+        --color-xq-gray-4: #aaaaaa;
+        --color-xq-gray-5: #9a9a9a;
+        --color-xq-gray-6: #7a7a7a;
+        --color-xq-gray-7: #5a5a5a;
+        --color-xq-gray-8: #3a3a3a;
+        --color-xq-gray-9: #1a1a1a;
+        --color-xq-gray-10: #0a0a0a;
+
+        /* xq-border-color */
+        --color-xq-border-outer: #bdbdbd;
+        --color-xq-border-inner: #e0e0e0;
+        /* @@end::light-xq-colors */
+
+        /* @@start::light-xq-shadow */
+        --shadow-xq-sm: 0px 0px 6px 0px rgba(90, 90, 90, 0.45);
+        --shadow-xq-md: 0px 0px 12px 0px rgba(122, 122, 122, 0.4);
+        --shadow-xq-lg: 0px 0px 24px 0px rgba(154, 154, 154, 0.35);
+        /* @@end::light-xq-shadow */
+    }
+
+    /* 暗色 */
+    :root[data-theme='dark'] {
+        --color-primary: 255 105 180;
+        --color-from-script: 255 105 180;
+        --color-base: 0 0 0;
+        --color-invert: 255 255 255;
+        --background: black;
+        --foreground: white;
+
+        /* @@start::dark-xq-colors */
+        /* xq-blue */
+        --color-xq-blue-1: #002288;
+        --color-xq-blue-2: #1133cc;
+        --color-xq-blue-3: #2266ff;
+        --color-xq-blue-4: #4488ff;
+        --color-xq-blue-5: #55bbff;
+        --color-xq-blue-6: #99ccee;
+        --color-xq-blue-7: #bbeeff;
+
+        /* xq-yellow */
+        --color-xq-yellow-1: #ff6600;
+        --color-xq-yellow-2: #dd7722;
+        --color-xq-yellow-3: #eeaa00;
+        --color-xq-yellow-4: #ffcc33;
+        --color-xq-yellow-5: #ffdd77;
+        --color-xq-yellow-6: #ffeeaa;
+        --color-xq-yellow-7: #fff7dd;
+
+        /* xq-red */
+        --color-xq-red-1: #661100;
+        --color-xq-red-2: #aa3300;
+        --color-xq-red-3: #dd4422;
+        --color-xq-red-4: #dd6666;
+        --color-xq-red-5: #ffaaaa;
+
+        /* xq-green */
+        --color-xq-green-1: #005500;
+        --color-xq-green-2: #007700;
+        --color-xq-green-3: #009900;
+        --color-xq-green-4: #66cc66;
+        --color-xq-green-5: #aaee88;
+
+        /* xq-gray */
+        --color-xq-gray-1: #000000;
+        --color-xq-gray-2: #0a0a0a;
+        --color-xq-gray-3: #2a2a2a;
+        --color-xq-gray-4: #3a3a3a;
+        --color-xq-gray-5: #5a5a5a;
+        --color-xq-gray-6: #7a7a7a;
+        --color-xq-gray-7: #9a9a9a;
+        --color-xq-gray-8: #aaaaaa;
+        --color-xq-gray-9: #cacaca;
+        --color-xq-gray-10: #eaeaea;
+
+        /* xq-border-color */
+        --color-xq-border-outer: #4a4a4a;
+        --color-xq-border-inner: #2a2a2a;
+        /* @@end::dark-xq-colors */
+
+        /* @@start::light-xq-shadow */
+        --shadow-xq-sm: 0px 0px 6px 0px rgba(154, 154, 154, 0.45);
+        --shadow-xq-md: 0px 0px 12px 0px rgba(154, 154, 154, 0.4);
+        --shadow-xq-lg: 0px 0px 24px 0px rgba(234, 234, 234, 0.35);
+        /* @@end::light-xq-shadow */
+    }
+
+    .card {
+        @apply bg-gray-300;
+    }
+
+    .card[data-status='dark'] {
+        @apply bg-gray-800;
+    }
+}
+
+@layer components {
+
+}

@@ -1,37 +1,19 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "noImplicitAny": false,
-    "allowJs": false,
-    "module": "commonjs",
-    "target": "ESNext",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
-    "jsx": "react",
-    "moduleResolution": "node",
-    "removeComments": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveConstEnums": true,
-    "esModuleInterop": true,
-    "declaration": true,
-    "outDir": "dist",
-    "declarationMap": true,
-    "strict": true,
-    "skipLibCheck": true,
+    "module": "ESNext",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
+      "@lib/*": ["./lib/*"],
+      "@/*": ["./src/*"],
+      "@xqsite-schema/*": [
+        "./lib/xqsite-schema/src/*"
       ]
-    }
+    },
+    "jsx": "preserve",
+    "verbatimModuleSyntax": true,
   },
-  "include": [
-    "./**/*"
-  ],
-  "exclude": [
-    "node_modules/**/*",
-    "dist/**/*",
-  ]
+  
+  "include": ["./tailwind.config.cjs", "./src/**/*", "./lib/**/*", "src/components/react/Toast/Toasts/.tsx"],
+  "exclude": ["node_modules", "dist", "./lib/xq-module-compare-sheet/dist/*", "./lib/logger/dist/*"]
 }

@@ -1,0 +1,32 @@
+{
+    "path-intellisense.mappings": {
+        "@lib": "${workspaceFolder}/lib",
+        "@/": "${workspaceFolder}/src",
+    },
+    "cSpell.words": [
+        "hljs",
+        "noto",
+        "preact",
+        "Qbiz",
+        "Qlite",
+        "qrcode",
+        "skipwords",
+        "videoteach",
+        "xqlite",
+        "xsat",
+        "xsfilter",
+        "xshelp",
+        "xspractice",
+        "xsquote",
+        "xsscript",
+        "xsta",
+        "xstrader"
+    ],
+    "tailwindCSS.experimental.classRegex": [
+        "/*\\s?tw:\\s?\\*/\\s?[`|'|\"](.*?)[`|'|\"]",
+        ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["createVariants\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["className[:|=][\\[|\\(]?([^)]*)[\\]|\\)]?", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"],
+    ]
+}

@@ -1,25 +1,68 @@
 {
-  "name": "ts-example",
-  "type": "commonjs",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "version": "0.0.1",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+    "name": "astro-tailwind-storybook",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev --base /xqsite-next/",
+        "start": "astro dev",
+        "check": "astro check",
+        "build": "astro build --base /xqsite-next/",
+        "preview": "astro preview --base /xqsite-next/",
+        "mock": "node ./mock-server/dist/index.js -p 5000 -s ./dist-a -e development --cache ../db.json --base \/xqsite-next",
+        "tailwind": "npx tailwindcss -i ./src/globals.css -o ./.storybook/tailwind.css",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build -- --base /xqsite-next-story/ && cp .storybook/Web.config ./storybook-static/Web.config",
+        "upload-storybook": "rm -rf /mnt/d/DJFile/uploads/xqsite-next-story && cp -r ./storybook-static /mnt/d/DJFile/uploads/xqsite-next-story",
+        "start-storybook": "astro preview --base /xqsite-next-story/ --outDir ./storybook-static --port 9001"
+    },
+    "dependencies": {
+        "@nanostores/preact": "^0.5.0",
+        "astro": "^4.0.3",
+        "class-variance-authority": "^0.7.0",
+        "nanostores": "^0.9.5",
+        "preact": "^10.19.3",
+        "react": "npm:@preact/compat@latest",
+        "react-dom": "npm:@preact/compat@latest",
+        "react-icons": "^4.11.0",
+        "tailwind-merge": "^2.1.0"
+    },
+    "devDependencies": {
+        "@astrojs/check": "^0.3.1",
+        "@astrojs/preact": "^3.0.1",
+        "@astrojs/sitemap": "^3.0.3",
+        "@astrojs/tailwind": "^5.0.3",
+        "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
+        "@storybook/addon-essentials": "^7.5.1",
+        "@storybook/addon-interactions": "^7.5.1",
+        "@storybook/addon-links": "^7.5.1",
+        "@storybook/addon-onboarding": "^1.0.8",
+        "@storybook/blocks": "^7.5.1",
+        "@storybook/react": "^7.5.1",
+        "@storybook/react-vite": "^7.5.1",
+        "@storybook/testing-library": "^0.2.2",
+        "@tailwindcss/container-queries": "^0.1.1",
+        "@types/node": "^20.10.4",
+        "@types/react": "18.2.43",
+        "@types/react-dom": "18.2.17",
+        "@types/react-syntax-highlighter": "^15.5.7",
+        "color2k": "^2.0.2",
+        "concurrently": "^8.2.2",
+        "connect-slashes": "^1.4.0",
+        "cors": "^2.8.5",
+        "entities": "^4.5.0",
+        "express": "^4.18.2",
+        "highlight.js": "^11.8.0",
+        "html-react-parser": "^4.2.9",
+        "javascript-stringify": "2.1.0",
+        "postcss": "^8.4.31",
+        "prettier": "^3.0.3",
+        "prettier-plugin-astro": "^0.12.0",
+        "prettier-plugin-tailwindcss": "^0.5.4",
+        "storybook": "^7.5.1",
+        "tailwindcss": "^3.3.6",
+        "tsup": "^7.2.0",
+        "typescript": "5.3.3",
+        "vite": "^5.0.7",
+        "winston": "3.10.0"
     }
-  },
-  "scripts": {
-    "dev": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./index.ts",
-    "build": "rm -rf dist && tsc && tsc-alias"
-  },
-  "devDependencies": {
-    "@types/node": "20.4.9",
-    "nodemon": "3.0.1",
-    "ts-node": "10.9.1",
-    "tsc-alias": "1.8.7",
-    "tsconfig-paths": "4.2.0",
-    "typescript": "5.1.6"
-  }
 }

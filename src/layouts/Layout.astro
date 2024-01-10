@@ -1,0 +1,36 @@
+---
+import { cn } from '@/utils/cn';
+import { ViewTransitions } from 'astro:transitions';
+import { Footer } from '@/components/react/Footer';
+import '../globals.css';
+
+export interface Props {
+    title: string;
+    className?: string;
+    ignore?: boolean;
+}
+const { title, className, ignore = false } = Astro.props;
+
+if (ignore) return `page ${Astro.url.pathname} is ignored.`
+---
+
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <ViewTransitions />
+    </head>
+    <body>
+        <main class={cn('mt-navbar flex flex-col items-center', className)}>
+            <slot />
+        </main>
+        <Footer client:load />
+    </body>
+</html>
+ 
+
