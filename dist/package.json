@@ -1,7 +1,7 @@
 {
   "name": "nilget",
   "description": "CLI for nilget",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "index.js",
   "type": "commonjs",
   "bin": {

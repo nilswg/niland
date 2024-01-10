@@ -21,7 +21,7 @@ export const Items = {
 
   // @see https://github.com/nilswg/nilget/tree/astro-tailwind-storybook
   "astro-tailwind-storybook": (project_name) =>
-    `git clone https://github.com/nilswg/nilget.git -b tsup-jest ${project_name}`,
+    `git clone https://github.com/nilswg/nilget.git -b astro-tailwind-storybook ${project_name}`,
 } as const;
 
 export type ItemsProps = typeof Items;

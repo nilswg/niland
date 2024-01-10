@@ -13,7 +13,7 @@ exports.Items = {
     // @see https://github.com/nilswg/tailwind-example
     "tailwind-example": (project_name) => `git clone https://github.com/nilswg/tailwind-example.git -b main ${project_name}`,
     // @see https://github.com/nilswg/nilget/tree/astro-tailwind-storybook
-    "astro-tailwind-storybook": (project_name) => `git clone https://github.com/nilswg/nilget.git -b tsup-jest ${project_name}`,
+    "astro-tailwind-storybook": (project_name) => `git clone https://github.com/nilswg/nilget.git -b astro-tailwind-storybook ${project_name}`,
 };
 const getItemsList = () => {
     return Object.keys(exports.Items);
