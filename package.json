@@ -1,23 +1,41 @@
 {
-  "name": "tsup-example",
-  "type": "commonjs",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "name": "tsup-vite-react-comp-lib",
+  "private": true,
   "version": "0.0.1",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
-    "dev": "tsup src/index.ts --watch --onSuccess \"node dist/index.js -e development\"",
-    "start": "node dist/index.js -e production",
-    "build": "tsup ./src/index.ts"
+    "dev": "vite",
+    "build": "tsup",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peer-dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.10.6",
-    "tsup": "^8.0.1",
-    "typescript": "5.3.3"
+    "@ianvs/prettier-plugin-sort-imports": "4.1.0",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "prettier": "3.0.3",
+    "prettier-plugin-tailwindcss": "0.5.4",
+    "tailwindcss": "^3.4.1",
+    "tsup": "^8.0.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
   }
 }

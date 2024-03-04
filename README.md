@@ -1,11 +1,12 @@
-# tsup-example
+# tsup-vite-react-component-lib
+這是一個開發 React 元件庫的起始框架
 
-## dev
-```bash
-npm run dev
+## 開發 (使用 Vite)
+```
+pnpm run dev
 ```
 
-## build
-```bash
-npm run build
+## 打包 (使用 Tsup)
+```
+pnpm run build
 ```
