@@ -2,7 +2,7 @@
   "name": "nilget",
   "main": "./index.ts",
   "type": "commonjs",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "dependencies": {
     "figlet": "1.6.0",
     "inquirer": "8.*"
