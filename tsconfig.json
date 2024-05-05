@@ -4,12 +4,10 @@
     "allowJs": false,
     "module": "commonjs",
     "target": "ESNext",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext", "DOM"],
     "jsx": "react",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "removeComments": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -22,16 +20,9 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "./**/*"
-  ],
-  "exclude": [
-    "node_modules/**/*",
-    "dist/**/*",
-  ]
+  "include": ["./**/*"],
+  "exclude": ["node_modules/**/*", "dist/**/*"]
 }
