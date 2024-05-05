@@ -4,11 +4,11 @@
 const _args = (function () {
   const args = process.argv.slice(2); // 去除前两个默认参数
 
-  let env = process.env.NODE_ENV || "development";
+  let env = process.env.NODE_ENV || 'development';
 
   for (let i = 0; i < args.length; i++) {
     switch (args[i]) {
-      case "-e": // env
+      case '-e': // env
         if (i + 1 < args.length) {
           env = args[i + 1];
         }
@@ -19,15 +19,12 @@ const _args = (function () {
   }
 
   if (!env) {
-    console.warn("[Warning] 因為無輸入 -e 參數，使用預設的環境變數");
+    console.warn('[Warning] 因為無輸入 -e 參數，使用預設的環境變數');
   }
-
-  // 輸出參數
-  console.log(`[mock] env: ${env}`);
 
   return {
     env,
-    IsDev: env === "development",
+    IsDev: env === 'development',
   };
 })();
 
