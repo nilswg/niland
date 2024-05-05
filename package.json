@@ -1,13 +1,11 @@
 {
   "name": "tsup-example",
   "type": "commonjs",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./index.d.ts",
+      "default": "./index.js"
     }
   },
   "scripts": {
@@ -15,9 +13,10 @@
     "start": "node dist/index.js -e production",
     "build": "tsup ./src/index.ts"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^20.10.6",
-    "tsup": "^8.0.1",
-    "typescript": "5.3.3"
+    "@types/node": "^20.12.8",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
   }
 }
